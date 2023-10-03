@@ -1,0 +1,26 @@
+{
+  "name": "yoga_school_app",
+  "version": "1.0.0",
+  "description": "2ºDAW final project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PikaCode5900/yoga-school-app.git"
+  },
+  "keywords": [
+    "yoga-website",
+    "final-project",
+    "nodejs",
+    "reactjs",
+    "tailwind-css"
+  ],
+  "author": "Pablo Rivas Liebana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PikaCode5900/yoga-school-app/issues"
+  },
+  "homepage": "https://github.com/PikaCode5900/yoga-school-app#readme"
+}
