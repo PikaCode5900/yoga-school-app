@@ -1,4 +1,4 @@
-# Página Web de la Escuela Narayana Yoga
+# Página Web de la Escuela Narayana Yoga - Estado:⚠️EN DESARROLLO🔧
 
 ## Descripción
 
