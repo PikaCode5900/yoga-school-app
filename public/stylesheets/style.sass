@@ -1,0 +1,90 @@
+/* Estilos generales */
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  font-family: 'Poppins', sans-serif
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  background-color: #f8f8f8
+
+header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background-color: #ffd7e3
+
+
+.logo
+  // Estilos para el logo
+
+nav
+  ul
+    display: flex
+    list-style: none
+    padding: 0
+    margin: 0
+    margin-right: 8.5rem // Desplazar el ul hacia la izquierda sin agregar espacio adicional
+
+    li
+      display: inline-block
+      margin-right: 20px // Espacio entre elementos del menú
+      transition: color 0.3s // Transición para el cambio de color al pasar el cursor
+
+      a
+        text-decoration: none
+        color: #333 // Color del texto del enlace
+        transition: color 0.3s // Transición para el cambio de color al pasar el cursor
+
+      ul
+        display: none
+        position: absolute
+        top: 100%
+        left: 0
+
+        li
+          display: block
+
+      &:hover ul
+        display: block
+
+      &:hover a
+        color: #ff3777 // Cambio de color al pasar el cursor sobre el enlace del menú
+
+.dropdown-content
+  display: none
+  position: absolute
+  background-color: #f9f9f9
+  min-width: 160px
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+  z-index: 1
+
+  .dropdown:hover &
+    display: block
+
+  a
+    color: black
+    padding: 12px 16px
+    text-decoration: none
+    display: block
+    transition: color 0.3s // Transición para el cambio de color al pasar el cursor
+
+    &:hover
+      color: #ff3777 // Cambio de color al pasar el cursor sobre el enlace del menú desplegable
+
+hr
+  background-color: #ff3777
+  border: none
+  height: 1rem
+
+h1
+  font-size: 2.5rem
+  margin-bottom: 10px
+  color: #ff3777
+
+p
+  font-size: 1.2rem
+  margin-bottom: 20px
