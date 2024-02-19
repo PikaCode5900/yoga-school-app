@@ -1,7 +1,7 @@
 {
   "name": "yoga-school-app-master",
   "version": "1.0.0",
-  "description": "2ºDAW final project",
+  "description": "2DAW final project",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bin/www",
@@ -15,7 +15,7 @@
     "yoga-website",
     "final-project",
     "nodejs",
-    "reactjs",
+    "react-js",
     "tailwind-css"
   ],
   "author": "Pablo Rivas Liebana",

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center; }
+  nav ul {
+    flex-direction: column;
+    margin-right: 0; }
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px; }
+  .container1 {
+    margin-top: 20px; } }
+
+/*# sourceMappingURL=responsive.css.map */
