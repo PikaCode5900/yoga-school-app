@@ -17,6 +17,17 @@ header {
   align-items: center;
   background-color: #ffd7e3; }
 
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px; }
+  .logo h2 {
+    color: #BD6682;
+    margin: 24px 0px 0px 5px; }
+  .logo img {
+    width: 80px;
+    height: 80px; }
+
 nav ul {
   display: flex;
   list-style: none;
@@ -41,7 +52,7 @@ nav ul {
     nav ul li:hover ul {
       display: block; }
     nav ul li:hover a {
-      color: #ff3777; }
+      color: #BD6682; }
 
 .dropdown-content {
   display: none;
@@ -62,18 +73,18 @@ nav ul {
     display: block;
     transition: color 0.3s; }
     .dropdown-content a:hover {
-      color: #ff3777;
+      color: #BD6682;
       transition: color 0.3s; }
 
 .hr-menu {
-  background-color: #ff3777;
+  background-color: #BD6682;
   border: none;
   height: 1rem; }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #ff3777; }
+  color: #BD6682; }
 
 p {
   font-size: 1.2rem;
@@ -85,19 +96,21 @@ p {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto; }
-
-.welcome h3 {
-  font-size: 24px; }
-
-.welcome h4 {
-  font-size: 20px;
-  color: #666;
-  margin: 10px 0px 20px 0px; }
-
-.welcome p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-top: 20px; }
+  .welcome img {
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    margin: 0 auto; }
+  .welcome h3 {
+    font-size: 24px; }
+  .welcome h4 {
+    font-size: 20px;
+    color: #666;
+    margin: 10px 0px 20px 0px; }
+  .welcome p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px; }
 
 .container1 {
   text-align: center;
@@ -128,6 +141,14 @@ p {
 .Gleaming-Mind-text img {
   margin-left: 15em; }
 
+@keyframes fadeInBackground {
+  0%, 100% {
+    background-color: transparent;
+    color: #000; }
+  50% {
+    background-color: #B07FAE;
+    color: #fff; } }
+
 .rectangles {
   display: flex;
   flex-wrap: wrap;
@@ -135,20 +156,113 @@ p {
 
 .rectangle {
   width: 300px;
-  height: 100px;
+  height: auto;
   margin: 20px;
   text-align: center;
   border-radius: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center; }
-  .rectangle:hover {
-    transform: scale(1.1);
-    background-color: #F7BB97; }
+  justify-content: center;
+  padding: 15px;
+  background-color: transparent;
+  color: #000;
+  animation: fadeInBackground 3.5s infinite; }
+  .rectangle img {
+    width: 100%;
+    height: 80%;
+    border-radius: 20px;
+    margin-bottom: 10px; }
 
 .rectangle p {
   margin: 0; }
+
+.rectangle:nth-child(1) {
+  animation-delay: 0s; }
+
+.rectangle:nth-child(2) {
+  animation-delay: 3.5s; }
+
+.rectangle:nth-child(3) {
+  animation-delay: 7s; }
+
+.rectangle:nth-child(4) {
+  animation-delay: 10.5s; }
+
+.rectangle:nth-child(5) {
+  animation-delay: 14s; }
+
+.rectangle:nth-child(6) {
+  animation-delay: 17.5s; }
+
+.rectangle:nth-child(7) {
+  animation-delay: 21s; }
+
+.rectangle:nth-child(8) {
+  animation-delay: 24.5s; }
+
+.rectangle:nth-child(9) {
+  animation-delay: 28s; }
+
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #ddd;
+  padding: 40px;
+  color: #666; }
+  footer .newsletter {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center; }
+    footer .newsletter h3 {
+      font-size: 24px;
+      margin-bottom: 10px; }
+    footer .newsletter p {
+      margin-bottom: 20px; }
+    footer .newsletter form {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      footer .newsletter form input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px; }
+      footer .newsletter form label {
+        display: block;
+        margin-bottom: 10px; }
+      footer .newsletter form button[type="submit"] {
+        background-color: #BD6682;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s; }
+        footer .newsletter form button[type="submit"]:hover {
+          background-color: #d23d6d; }
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center; }
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .footer-links ul li {
+      margin-bottom: 10px;
+      margin-right: 20px; }
+      .footer-links ul li:last-child {
+        margin-right: 0; }
+
+.copyright {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

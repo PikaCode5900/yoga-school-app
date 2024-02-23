@@ -20,7 +20,16 @@ header
 
 .logo
   // Estilos para el logo
-
+  display: flex
+  flex-wrap: wrap
+  margin: 5px
+  h2
+    color: #BD6682
+    margin: 24px 0px 0px 5px
+  img
+    width: 80px
+    height: 80px
+  
 nav
   ul
     display: flex
@@ -52,7 +61,7 @@ nav
         display: block
 
       &:hover a
-        color: #ff3777 // Cambio de color al pasar el cursor sobre el enlace del menú
+        color: #BD6682 // Cambio de color al pasar el cursor sobre el enlace del menú
 
 .dropdown-content
   display: none
@@ -77,18 +86,18 @@ nav
     transition: color 0.3s 
 
     &:hover
-      color: #ff3777 // Cambio de color al pasar el cursor sobre el enlace del menú desplegable
+      color: #BD6682 // Cambio de color al pasar el cursor sobre el enlace del menú desplegable
       transition: color 0.3s 
 
 .hr-menu
-  background-color: #ff3777
+  background-color: #BD6682
   border: none
   height: 1rem
 
 h1
   font-size: 2.5rem
   margin-bottom: 10px
-  color: #ff3777
+  color: #BD6682
 
 p
   font-size: 1.2rem
@@ -102,18 +111,25 @@ p
   margin-left: auto
   margin-right: auto
 
-.welcome h3
-  font-size: 24px
+  img
+    display: block
+    width: 100%
+    max-height: 600px
+    margin: 0 auto
 
-.welcome h4
-  font-size: 20px
-  color: #666
-  margin: 10px 0px 20px 0px
+  h3
+    font-size: 24px
 
-.welcome p
-  font-size: 18px
-  line-height: 1.6
-  margin-top: 20px
+  h4
+    font-size: 20px
+    color: #666
+    margin: 10px 0px 20px 0px
+
+  p
+    font-size: 18px
+    line-height: 1.6
+    margin-top: 20px
+
 
 // Estilos para la sección .container1
 .container1
@@ -147,6 +163,17 @@ p
 
 
 // Estilos para los rectángulos de información sobre los beneficios del Yoga
+@keyframes fadeInBackground 
+  0%, 100% 
+    background-color: transparent;
+    color: #000; // Asumiendo que el texto es inicialmente negro
+  
+  50% 
+    background-color: #B07FAE
+    color: #fff
+  
+
+
 .rectangles
   display: flex
   flex-wrap: wrap
@@ -154,20 +181,111 @@ p
 
 .rectangle
   width: 300px
-  height: 100px
+  height: auto
   margin: 20px
   text-align: center
   border-radius: 30px
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
-  transition: transform 0.3s
   display: flex
+  flex-direction: column
   align-items: center
   justify-content: center
+  padding: 15px
+  background-color: transparent
+  color: #000
+  animation: fadeInBackground 3.5s infinite
 
-  &:hover 
-    transform: scale(1.1)
-    background-color: #F7BB97
+  img
+    width: 100%
+    height: 80%
+    border-radius: 20px
+    margin-bottom: 10px
 
 .rectangle p
   margin: 0
-      
+
+@for $i from 1 through 9 
+  .rectangle:nth-child(#{$i}) 
+    animation-delay: ($i - 1) * 3.5s;
+  
+  
+
+
+
+// Estilos de la ultima sección de la pagina principal, el footer
+footer 
+  bottom: 0
+  width: 100%
+  background-color: #ddd
+  padding: 40px
+  color: #666
+
+  .newsletter
+    max-width: 600px
+    margin: 0 auto
+    text-align: center
+
+    h3
+      font-size: 24px
+      margin-bottom: 10px
+
+    p
+      margin-bottom: 20px
+
+    form
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      input[type="email"]
+        width: 100%
+        padding: 10px
+        margin-bottom: 10px
+        border: 1px solid #ccc
+        border-radius: 5px
+
+      label
+        display: block
+        margin-bottom: 10px
+
+      button[type="submit"]
+        background-color: #BD6682
+        color: white
+        padding: 10px 20px
+        border: none
+        border-radius: 5px
+        cursor: pointer
+        transition: background-color 0.3s
+
+        &:hover
+          background-color: #d23d6d
+
+.footer-links
+  display: flex
+  justify-content: center
+  max-width: 800px
+  margin: 40px auto
+  text-align: center
+
+  ul
+    list-style: none
+    padding: 0
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+    li
+      margin-bottom: 10px
+      margin-right: 20px
+
+      &:last-child
+        margin-right: 0
+
+.copyright
+  text-align: center
+
+// Apartado "ENSEÑANZAS"
+
+
+.INteachings
+  
