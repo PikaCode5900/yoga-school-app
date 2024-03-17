@@ -4,10 +4,16 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
+const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index');
+const subscribeRouter = require('./routes/subscribe');
 
 const app = express();
+
+// For bodyParser
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,6 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'));
 
 app.use('/', indexRouter);
+app.use('/subscribe', subscribeRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

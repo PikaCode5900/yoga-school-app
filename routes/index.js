@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('home-page', { title: 'Narayana Yoga | Pagina Principal' });
+  res.render('home-page', { title: 'Narayana Yoga | PÁGINA PRINCIPAL' });
 });
 
 /* GET teachings page. */
@@ -18,7 +18,7 @@ router.get('/training', function(req, res, next) {
 
 /* GET tools page. */
 router.get('/tools', function(req, res, next) {
-  res.render('tools', { title: 'Narayana Yoga | Herramientas' });
+  res.render('tools', { title: 'Narayana Yoga | HERRAMIENTAS' });
 });
 
 /* GET about page. */
@@ -45,6 +45,5 @@ router.get('/mentoring', function(req, res, next) {
 router.get('/comments', function(req, res, next) {
   res.render('comments', { title: 'Narayana Yoga | Comentarios destacados' });
 });
-
 
 module.exports = router;
