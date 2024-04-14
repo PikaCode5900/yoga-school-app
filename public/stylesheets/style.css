@@ -23,7 +23,7 @@ header {
   margin: 5px; }
   .logo h2 {
     color: #BD6682;
-    margin: 24px 0px 0px 5px; }
+    margin: 25px 0px 0px 5px; }
   .logo img {
     width: 80px;
     height: 80px; }
@@ -53,17 +53,40 @@ nav ul {
       display: block; }
     nav ul li:hover a {
       color: #BD6682; }
+    nav ul li .auth-links {
+      display: flex;
+      gap: 1rem; }
+      nav ul li .auth-links a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem; }
+      nav ul li .auth-links:hover {
+        background-color: #0062cc; }
+  nav ul .loginr-egister-btn {
+    color: #000;
+    padding: 0.5rem;
+    border: none;
+    background-color: #BD6682;
+    transition: 0.2s; }
+    nav ul .loginr-egister-btn:hover {
+      transition: 0.2s;
+      background-color: #a84867; }
+    nav ul .loginr-egister-btn a {
+      text-decoration: none; }
 
 .dropdown-content {
-  display: none;
+  visibility: hidden;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  opacity: 0; }
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s; }
   .dropdown:hover .dropdown-content {
-    display: block;
+    visibility: visible;
     opacity: 1;
     transition: opacity 0.3s; }
   .dropdown-content a {
@@ -189,6 +212,7 @@ p {
   padding: 15px;
   background-color: transparent;
   color: #000;
+  transition: transform 0.3s;
   animation: fadeInBackground 3.5s infinite; }
   .rectangle img {
     width: 100%;
@@ -197,6 +221,8 @@ p {
     margin-bottom: 10px; }
   .rectangle p {
     margin: 0; }
+  .rectangle:hover {
+    transform: scale(1.1); }
 
 .rectangle:nth-child(1) {
   animation-delay: 0s; }

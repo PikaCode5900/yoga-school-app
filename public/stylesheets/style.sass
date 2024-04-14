@@ -25,7 +25,7 @@ header
   margin: 5px
   h2
     color: #BD6682
-    margin: 24px 0px 0px 5px
+    margin: 25px 0px 0px 5px
   img
     width: 80px
     height: 80px
@@ -62,19 +62,49 @@ nav
 
       &:hover a
         color: #BD6682 // Cambio de color al pasar el cursor sobre el enlace del menú
+      
+      .auth-links
+        display: flex
+        gap: 1rem
+
+        a
+          text-decoration: none
+          color: #fff
+          background-color: #007bff
+          padding: 0.5rem 1rem
+          border-radius: 0.25rem
+
+        &:hover
+          background-color: darken(#007bff, 10%)
+
+    // Estilos específicos para "Iniciar sesión" y "Registrarse"
+    .loginr-egister-btn
+      color: #000
+      padding: 0.5rem
+      border: none
+      background-color: #BD6682
+      transition: 0.2s
+
+      &:hover
+        transition: 0.2s
+        background-color: darken(#BD6682, 10%)
+
+      a
+        text-decoration: none
 
 .dropdown-content
-  display: none
+  visibility: hidden
   position: absolute
   background-color: #f9f9f9
   min-width: 160px
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
   z-index: 1
   opacity: 0
+  transition: opacity 0.3s, visibility 0.3s
   
 
   .dropdown:hover &
-    display: block
+    visibility: visible
     opacity: 1
     transition: opacity 0.3s
 
@@ -218,6 +248,7 @@ $animation-iteration: infinite
   padding: 15px
   background-color: transparent
   color: #000
+  transition: transform 0.3s
   animation: $animation-name $animation-duration $animation-iteration
 
   img
@@ -229,6 +260,8 @@ $animation-iteration: infinite
   p
     margin: 0
 
+  &:hover
+    transform: scale(1.1)
 
 @for $i from 1 through 10
   .rectangle:nth-child(#{$i})
